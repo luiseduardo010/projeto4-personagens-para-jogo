@@ -1,23 +1,18 @@
 const Character = require('./Character');
-const Mulher = require('./Mulher');
-const Capitão = require('./Capitão');
-const Batman = require('./Batman');
+const Thief = require('./Thief');
+const Mage = require('./Mage');
+const Warrior = require('./Warrior');
 
+const hero = new Character('Flash', 100, 50, 10);
+const thief = new Thief('Mulher Maravilha', 80, 35, 5);
+const mage = new Mage('Capitão América', 70, 25, 5, 30);
+const warrior = new Warrior('Thor', 120, 30, 25, 10);
 
-
-const hero = new Character('Hulk', 100, 20, 10);
-const mulher = new Mulher('Mulher Maravilha', 80, 25, 5);
-const capitão = new Capitão('Capitão América', 70, 15, 5, 30);
-const batman = new Batman('Batman', 120, 30, 20, 10);
-
-
-
-
-hero.attack(mulher);
-mulher.attack(hero);
-capitão.attack(batman);
-capitão.heal(hero);
-batman.changePosition();
-batman.attack(capitão);
-batman.changePosition();
-batman.attack(capitão);
+hero.attack(thief);
+thief.attack(hero);
+mage.attack(warrior);
+mage.heal(hero);
+warrior.changePosition();
+warrior.attack(mage);
+warrior.changePosition();
+warrior.attack(mage);
